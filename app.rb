@@ -1,14 +1,15 @@
-require('sinatra')
-require('sinatra/reloader')
-require('./lib/word_count')
+require 'sinatra'
+require 'sinatra/reloader'
+require './lib/word_count'
 
-get('/form') do
-  erb(:form)
+get '/' do
+  erb :form
 end
 
-get('/results') do
+get '/results' do
+  @sentence = params["sentence"]
+  @word = params["word"]
+  @results = @sentence.word_count(@word)
 
-@results = params.fetch('sentence').word_count(params.fetch('word'))
-
-  erb(:results)
+  erb :results
 end

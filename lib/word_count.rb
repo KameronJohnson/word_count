@@ -1,17 +1,12 @@
-define_method(:word_count) do |user_string|
-    word_frequency = 0
+class String
 
-    user_word = self.downcase()
+  define_method(:word_count) do |user_word|
 
-    new_user_string = user_string.downcase().split()
-
-      new_user_string.each() do |user_string_loop|
-      if user_string_loop == user_word
-        word_frequency +=1
-
+      user_string = self.downcase().split(" ")
+      if user_string.include?(user_word)
+        user_string.count(user_word)
       else
-        word_frequency
-
+        0
       end
-   end
- end
+    end
+  end
