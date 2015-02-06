@@ -1,26 +1,33 @@
+Word Count!
+================
 
-## Setup Instructions
+by Kameron Johnson
 
-###Gems used
-```erb
-sinatra
-sinatra-contrib
+Word Count! is a website that counts how many times a user inputted word occurs in a user inputted sentence.
+
+Installation
+------------
+
+Install by first cloning the repository.  
+```
+$ git clone http://github.com/kameronjohnson/word_count.git
 ```
 
-###Install Bundler
-```erb
-$ gem install bundler
+Install all of the required gems:
+```
+$ bundle install
 ```
 
-###Run Bundler
-```erb
-$ bundle
+Start the webserver with Sinatra:
+```
+$ ruby app.rb
 ```
 
-###Bug Reports
-Returns string instead of actual number.
+In your web browser, go to http://localhost:4567
 
-####Author
-Kameron Johnson
+Have Fun!
 
-####MIT License
+License
+-------
+
+GNU GPL v2. Copyright 2015 Kameron Johnson
